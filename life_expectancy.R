@@ -62,3 +62,15 @@ hist(high_gdp, col = "blue")
 
 # In conclusion we can see that people usually live longer if the
 # country where they live has a high GDP.
+
+# Added a scatter plot to see the relationship between life expectancy and GDP
+scatter_plot <- ggplot(data, aes(x = GDP, y = life_expectancy)) +
+  geom_point() +
+  labs(
+    title = "Scatter Plot of Life Expectancy vs. GDP",
+    x = "GDP",
+    y = "Life Expectancy"
+  ) +
+  theme_minimal()
+
+print(scatter_plot)
